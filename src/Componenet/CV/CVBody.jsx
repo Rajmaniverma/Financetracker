@@ -34,7 +34,7 @@ const transactions = [
 const CVBody = () => {
   const navigate = useNavigate();
   const Submithandler = () => {
-    navigate("/Login")
+     navigate("/Home", { replace: true });
   }
 
   return (

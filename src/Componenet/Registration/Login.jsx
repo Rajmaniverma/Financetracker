@@ -11,7 +11,7 @@ const Login = () => {
     setShowPassword(prev => !prev);
   };
 const submithandler = () => {
-  navigate("/Home")
+  navigate("/Home", { replace: true });
 }
   return (
     <div className="min-h-screen fixed inset-0 bg-linear-to-r from-white via-sky-100 to-sky-500 flex items-center justify-center px-4">
