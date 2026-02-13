@@ -132,7 +132,7 @@ const SubmitExpense = () => {
 
           {/* menuoption end */}
       {/* image change on click code  */}
-      <img
+      {/* <img
         src={profile}
         onClick={openGallery}
         className="h-12 w-12 rounded-full object-cover cursor-pointer border-2 border-white"
@@ -145,7 +145,7 @@ const SubmitExpense = () => {
         ref={inputRef}
         onChange={handleChange}
         hidden
-      />
+      /> */}
       {/* Text or name of the person  */}
       <h1 className='text-gray-500 font-semibold md:text-xl sm:text-[18px]'>HI , users <br></br>
       Welcome to <span className='text-slate-500  '>  Dashboard</span></h1>

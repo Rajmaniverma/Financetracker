@@ -21,7 +21,7 @@ const submithandler = () => {
           Login
         </h2>
 
-        <form className="mt-8 space-y-5" onSubmit={(submithandler)}>
+        <form className="mt-8 space-y-5" >
 
           {/* Email Input */}
           <div className="relative w-full">
@@ -62,12 +62,13 @@ const submithandler = () => {
           </div>
 
           {/* Signup Button */}
-          <button
+          <Link to="/Home"> <button
             type="submit"
             className="w-full bg-blue-600 text-white py-2 rounded-xl font-semibold hover:bg-blue-700 transition"
           >
             Login
-          </button>
+          </button></Link>
+         
         </form>
 
         <p className="text-sm text-gray-500 text-center mt-6">

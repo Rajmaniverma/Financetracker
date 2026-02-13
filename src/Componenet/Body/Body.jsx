@@ -50,8 +50,8 @@ const Body = () => {
       "
     >
       {/* Monthly Spending */}
-      <div className=" w-full rounded-xl p-3">
-        <h1 className="text-center text-gray-300 text-xl mb-2">
+      <div className=" w-full  p-3 bg-white/40 backdrop-blur-xl rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+        <h1 className="text-center text-gray-600 text-2xl mb-2">
           Monthly Spending
         </h1>
         <div className="w-full flex justify-center">
@@ -60,8 +60,8 @@ const Body = () => {
       </div>
 
       {/* Weekly Spending */}
-      <div className=" w-full rounded-xl py-3 pr-3 pl-0">
-        <h1 className="text-center text-gray-300 text-xl mb-2">
+      <div className=" w-full  py-3 pr-3 pl-0 bg-white/40 backdrop-blur-xl rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+        <h1 className="text-center text-gray-600 text-2xl mb-2">
           Weekly Spending
         </h1>
         <div className="w-full flex justify-center">
