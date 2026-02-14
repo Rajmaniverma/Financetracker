@@ -34,7 +34,7 @@ const transactions = [
 const CVBody = () => {
   const navigate = useNavigate();
   const Submithandler = () => {
-     navigate("/Login", { replace: true });
+     navigate("/Login");
   }
 
   return (
@@ -65,20 +65,36 @@ const CVBody = () => {
       </div>
 
       {/* Action Buttons */}
-      <div className="max-w-6xl mb-5 w-full mx-auto mt-10 flex flex-wrap gap-3 justify-evenly">
-          <button onClick={Submithandler} className="rounded-2xl   px-7 py-3.5 w-60 shadow-xl hover:scale-95 active:scale-105 hover:bg-[#4437B8] transition-all duration-200 bg-[#5A4BDA] text-white font-semibold text-[17px]">
-         balance
-        </button>
-        <button onClick={Submithandler} className="rounded-2xl   px-7 py-3.5 w-60 shadow-xl hover:scale-95 active:scale-105 hover:bg-[#16A34A] transition-all duration-200 bg-[#22C55E] text-white font-semibold text-[17px]">
-        + Add Income
-        </button>
+<div className="max-w-6xl mb-5 w-full mx-auto mt-10 px-4">
+  <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:justify-evenly">
+    
+    {/* Balance Button: Full width on mobile, auto on desktop */}
+    <button 
+      onClick={Submithandler} 
+      className="col-span-2 sm:w-60 rounded-2xl px-7 py-4 shadow-lg shadow-indigo-200 hover:scale-[0.98] active:scale-105 transition-all duration-200 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-[17px] flex items-center justify-center gap-2"
+    >
+      <span className="opacity-80 text-sm uppercase tracking-wider">Total</span> Balance
+    </button>
 
-        <button onClick={Submithandler} className="rounded-2xl   px-7 py-3.5 w-60 shadow-xl hover:scale-95 active:scale-105 hover:bg-[#DC2626] transition-all duration-200 bg-[#EF4444] text-white font-semibold text-[17px]">
-            + Add Expense
-        </button>
+    {/* Add Income: Half width on mobile */}
+    <button 
+      onClick={Submithandler} 
+      className="sm:w-60 rounded-2xl px-4 py-4 shadow-lg shadow-green-100 hover:scale-[0.98] active:scale-105 transition-all duration-200 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-[15px] sm:text-[17px] flex items-center justify-center"
+    >
+      + Income
+    </button>
 
-      
-      </div>
+    {/* Add Expense: Half width on mobile */}
+    <button 
+      onClick={Submithandler} 
+      className="sm:w-60 rounded-2xl px-4 py-4 shadow-lg shadow-red-100 hover:scale-[0.98] active:scale-105 transition-all duration-200 bg-rose-500 hover:bg-rose-600 text-white font-semibold text-[15px] sm:text-[17px] flex items-center justify-center"
+    >
+      + Expense
+    </button>
+    
+  </div>
+</div>
+
 
       {/* Recent Booking */}
       <div className="max-w-6xl w-full mx-auto mb-10 border border-white/10 rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.45)]">

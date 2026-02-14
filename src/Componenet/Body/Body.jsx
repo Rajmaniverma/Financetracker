@@ -69,84 +69,48 @@ const Body = () => {
         </div>
       </div>
     </div>
-
-    {/* ================= SUMMARY CARDS ================= */}
-    <div
-      className="
-        bg-transparent
-        grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-        gap-4
-        max-w-6xl w-full mx-auto
-        px-2
-        py-10
-      "
+{/* ================= SPREAD SUMMARY CARDS ================= */}
+<div className="max-w-6xl w-full mx-auto px-4 py-8">
+  <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+    
+    {/* Balance Card: Full width on mobile (col-span-2), auto on desktop */}
+    <button
+     
+      className="col-span-2 lg:col-span-1 w-full text-left relative overflow-hidden bg-gradient-to-br from-indigo-600 to-violet-700 text-white p-2 rounded-2xl border-b-4 border-indigo-900 shadow-xl transition-all duration-100 active:border-b-0 active:translate-y-1 hover:brightness-110"
     >
-      {/* Balance */}
-      <button
-        className="
-          text-left
-          bg-linear-to-br from-pink-600 to-blue-700
-          text-white font-semibold
-          rounded-xl
-          shadow-[0_6px_0_#5B21B6,0_14px_30px_rgba(147,51,234,0.45)]
-          transition-all duration-150
-          active:translate-y-1
-          active:shadow-[0_2px_0_#5B21B6,0_6px_16px_rgba(147,51,234,0.35)]
-          cursor-pointer
-          p-4
-        "
-      >
-        <span className="flex w-full justify-between items-baseline">
-          <span className="font-semibold">Balance:</span>
-          <FaWallet />
-        </span>
-        <h1 className="text-2xl mt-2">₹{summary.balance}</h1>
-      </button>
+      <div className="flex justify-between items-center mb-2">
+        <span className="text-xs uppercase tracking-widest font-bold opacity-70">Total Balance</span>
+        <FaWallet className="text-sm opacity-80" />
+      </div>
+      <h1 className="text-2xl font-bold tracking-tight">₹{summary.balance.toLocaleString()}</h1>
+    </button>
 
-      {/* Income */}
-      <button
-        className="
-          text-left
-          bg-linear-to-br from-green-300 to-green-700
-          text-white font-semibold
-          rounded-xl
-          shadow-[0_6px_0_#14532D,0_14px_30px_rgba(22,163,74,0.45)]
-          transition-all duration-150
-          active:translate-y-1
-          active:shadow-[0_2px_0_#14532D,0_6px_16px_rgba(22,163,74,0.35)]
-          cursor-pointer
-          p-4
-        "
-      >
-        <span className="flex w-full justify-between items-baseline">
-          <span className="font-semibold">Income:</span>
-          <FaArrowUp />
-        </span>
-        <h1 className="text-2xl mt-2">₹{summary.income}</h1>
-      </button>
+    {/* Income Card: Takes half width on mobile */}
+    <button
+      
+      className="w-full text-left relative overflow-hidden bg-gradient-to-br from-emerald-500 to-teal-600 text-white p-2 rounded-2xl border-b-4 border-emerald-900 shadow-xl transition-all duration-100 active:border-b-0 active:translate-y-1 hover:brightness-110"
+    >
+      <div className="flex justify-between items-center mb-2">
+        <span className="text-xs uppercase tracking-widest font-bold opacity-70">Income</span>
+        <FaArrowUp className="text-sm opacity-80" />
+      </div>
+      <h1 className="text-2xl font-bold">₹{summary.income.toLocaleString()}</h1>
+    </button>
 
-      {/* Expense */}
-      <button
-        className="
-          text-left
-          bg-linear-to-br from-red-400 to-red-700
-          text-white font-semibold
-          rounded-xl
-          shadow-[0_6px_0_#7F1D1D,0_14px_30px_rgba(185,28,28,0.45)]
-          transition-all duration-150
-          active:translate-y-1
-          active:shadow-[0_2px_0_#7F1D1D,0_6px_16px_rgba(185,28,28,0.35)]
-          cursor-pointer
-          p-4
-        "
-      >
-        <span className="flex w-full justify-between items-baseline">
-          <span className="font-semibold">Expenses:</span>
-          <FaArrowDown />
-        </span>
-        <h1 className="text-2xl mt-2">₹{summary.expense}</h1>
-      </button>
-    </div>
+    {/* Expense Card: Takes half width on mobile */}
+    <button
+      
+      className="w-full text-left relative overflow-hidden bg-gradient-to-br from-rose-500 to-red-600 text-white p-2 rounded-2xl border-b-4 border-rose-900 shadow-xl transition-all duration-100 active:border-b-0 active:translate-y-1 hover:brightness-110"
+    >
+      <div className="flex justify-between items-center mb-2">
+        <span className="text-xs uppercase tracking-widest font-bold opacity-70">Expenses</span>
+        <FaArrowDown className="text-sm opacity-80" />
+      </div>
+      <h1 className="text-2xl font-bold">₹{summary.expense.toLocaleString()}</h1>
+    </button>
+    
+  </div>
+</div>
 
     {/* ================= RECENT BOOKING (UNCHANGED) ================= */}
     <div className="
