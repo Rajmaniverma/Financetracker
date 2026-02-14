@@ -66,17 +66,18 @@ const CVBody = () => {
 
       {/* Action Buttons */}
       <div className="max-w-6xl mb-5 w-full mx-auto mt-10 flex flex-wrap gap-3 justify-evenly">
-        <button onClick={Submithandler} className="px-7 py-3.5 w-60 rounded-md hover:bg-[#16A34A] transition-all duration-200 bg-[#22C55E] text-white font-semibold text-[17px]">
+          <button onClick={Submithandler} className="rounded-2xl   px-7 py-3.5 w-60 shadow-xl hover:scale-95 active:scale-105 hover:bg-[#4437B8] transition-all duration-200 bg-[#5A4BDA] text-white font-semibold text-[17px]">
+         balance
+        </button>
+        <button onClick={Submithandler} className="rounded-2xl   px-7 py-3.5 w-60 shadow-xl hover:scale-95 active:scale-105 hover:bg-[#16A34A] transition-all duration-200 bg-[#22C55E] text-white font-semibold text-[17px]">
         + Add Income
         </button>
 
-        <button onClick={Submithandler} className="px-7 py-3.5 w-60 rounded-md hover:bg-[#DC2626] transition-all duration-200 bg-[#EF4444] text-white font-semibold text-[17px]">
+        <button onClick={Submithandler} className="rounded-2xl   px-7 py-3.5 w-60 shadow-xl hover:scale-95 active:scale-105 hover:bg-[#DC2626] transition-all duration-200 bg-[#EF4444] text-white font-semibold text-[17px]">
             + Add Expense
         </button>
 
-        <button onClick={Submithandler} className="px-7 py-3.5 w-60 rounded-md hover:bg-[#4437B8] transition-all duration-200 bg-[#5A4BDA] text-white font-semibold text-[17px]">
-         Transfer
-        </button>
+      
       </div>
 
       {/* Recent Booking */}
